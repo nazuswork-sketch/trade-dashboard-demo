@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Dashboard Demo</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/lucide-react@0.378.0/dist/umd/lucide-react.js"></script>
-    <style>
-        body { margin: 0; padding: 0; }
-    </style>
+    <style>body { margin: 0; padding: 0; font-family: Arial, sans-serif; }</style>
 </head>
 <body>
     <div id="root"></div>
-    
-    <script type="text/babel" src="trade-dashboard-demo.jsx"></script>
     <script type="text/babel">
+        function App() {
+            return React.createElement("div", {style: {background: "#0F1B2D", color: "white", padding: "20px"}},
+                React.createElement("h1", null, "Trade Dashboard Demo"),
+                React.createElement("p", null, "Dashboard is working!")
+            );
+        }
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(React.createElement(TradeDashboard));
+        root.render(React.createElement(App));
     </script>
 </body>
 </html>
